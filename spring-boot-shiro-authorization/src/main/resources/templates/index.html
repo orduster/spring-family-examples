@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+</head>
+<body>
+<p>你好！[[${user.userName}]]</p>
+<a th:href="@{/logout}">注销</a>
+
+<h3>权限测试链接</h3>
+<div>
+    <a th:href="@{/u ser/list}">获取用户信息</a>
+    <a th:href="@{/user/add}">新增用户</a>
+    <a th:href="@{/user/delete}">删除用户</a>
+</div>
+</body>
+</html>
