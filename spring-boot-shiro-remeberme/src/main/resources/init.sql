@@ -1,0 +1,13 @@
+DROP TABLE IF EXISTS `t_user`;
+
+CREATE TABLE `t_user` (
+  `ID` bigint(20) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+  `USERNAME` varchar(50) NOT NULL COMMENT '用户名',
+  `PASSWORD` varchar(128) NOT NULL COMMENT '密码',
+  `STATUS` char(1) NOT NULL COMMENT '状态 0锁定 1有效',
+  `CRATE_TIME` date NOT NULL COMMENT '创建时间',
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+
+insert  into `t_user`(`ID`,`USERNAME`,`PASSWORD`,`STATUS`,`CRATE_TIME`) values (1,'ordust','93e4a60023701f52b8e8cb50472ff210','1','2018-12-31'),(2,'12345','cd1191e3c54919fc5fed64516bbb53fe','1','2018-12-31');
