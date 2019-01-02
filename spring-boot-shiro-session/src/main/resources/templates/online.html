@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-cn" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>在线用户管理</title>
+    <link rel="stylesheet" th:href="@{/css/online.css}">
+</head>
+<body>
+<h3>在线用户人数：<span id="onlineCount"></span></h3>
+<table>
+    <tr>
+        <td>序号</td>
+        <td>用户名称</td>
+        <td>登录时间</td>
+        <td>最后访问时间</td>
+        <td>主机</td>
+        <td>状态</td>
+        <td>操作</td>
+    </tr>
+</table>
+<a th:href="@{/index}">返回</a>
+
+<script th:src="@{/js/jquery-1.11.1.min.js}"></script>
+<script th:src="@{/js/dateFormat.js}"></script>
+<script th:inline="javascript">
+    var ctx = [[@{/}]];
+    $.get(ctx + "online/list", {}, function (result) {
+        console.log(result);
+        var length = result.length;
+        $('#onlineCount').text(length);
+        var html = "";
+        for (var i = 0; i < length; i++) {
+            html += "<tr>"
+                + "<td>" + (i + 1) + "</td>"
+                + "<td>" + result[i].username + "</td>"
+                + "<td>" + new Date(result[i].startTimestamp).Format("yyyy-MM-dd hh:mm:ss") + "</td>"
+                + "<td>" + new Date(result[i].lastAccessTime).Format("yyyy-MM-dd hh:mm:ss") + "</td>"
+                + "<td>" + result[i].host + "</td>"
+                + "<td>" + result[i].status + "</td>"
+                + "<td><a href='#' onclick='offline(\"" + result[i].id + "\",\"" + result[i].status + "\")'>下线</a></td>"
+                + "</tr>";
+        }
+        $("table").append(html);
+    }, "json");
+
+    function offline(id, status) {
+        if (status == "离线") {
+            alert("该用户已经是离线状态！");
+            return;
+        }
+        $.get(ctx + "online/forceLogout", {"id": id}, function (result) {
+            if (result.code == 0) {
+                alert("该用户已经强制下线！");
+                location.href = ctx + 'online/index';
+            } else {
+                alert(result.msg);
+            }
+        }, "json");
+    }
+</script>
+</body>
+</html>
