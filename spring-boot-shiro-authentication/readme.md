@@ -476,7 +476,7 @@
      </html>
      ```
 
-9. 控制层：TestController
+9. 控制层：LoginController
 
    ```java
    import com.ordust.entity.ResponseBo;
