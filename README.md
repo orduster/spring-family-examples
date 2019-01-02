@@ -10,4 +10,4 @@
 - [Spring Boot Shiro权限控制](https://github.com/orduster/spring-boot-examples/tree/master/spring-boot-shiro-authorization "Spring Boot Shiro权限控制")
 - [Spring Boot Shiro Redis](https://github.com/orduster/spring-boot-examples/tree/master/spring-boot-shiro-redis "Spring Boot Shiro Redis")
 - [Spring Boot Shiro Ehcache](https://github.com/orduster/spring-boot-examples/tree/master/spring-boot-shiro-ehcache "Spring Boot Shiro Ehcache")
--[Spring Boot Thymeleaf中使用Shiro标签](https://github.com/orduster/spring-boot-examples/blob/master/spring-boot-shiro-thymeleaf-tag "Spring Boot Thymeleaf中使用Shiro标签")
+- [Spring Boot Thymeleaf中使用Shiro标签](https://github.com/orduster/spring-boot-examples/blob/master/spring-boot-shiro-thymeleaf-tag "Spring Boot Thymeleaf中使用Shiro标签")
