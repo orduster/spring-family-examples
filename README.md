@@ -8,3 +8,5 @@
 - [Spring Boot Shiro用户认证](https://github.com/orduster/spring-boot-examples/tree/master/spring-boot-shiro-authentication "Spring Boot Shiro用户认证")
 - [Spring Boot Shiro Remember Me](https://github.com/orduster/spring-boot-examples/tree/master/spring-boot-shiro-remeberme "Spring Boot Shiro Remember Me")
 - [Spring Boot Shiro权限控制](https://github.com/orduster/spring-boot-examples/tree/master/spring-boot-shiro-authorization "Spring Boot Shiro权限控制")
+- [Spring Boot Shiro Redis](https://github.com/orduster/spring-boot-examples/tree/master/spring-boot-shiro-redis "Spring Boot Shiro Redis")
+- [Spring Boot Shiro Ehcache](https://github.com/orduster/spring-boot-examples/tree/master/spring-boot-shiro-ehcache "Spring Boot Shiro Ehcache")
