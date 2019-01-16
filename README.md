@@ -5,6 +5,7 @@
 ### Spring MVC学习
 - [springmvc-helloworld](https://github.com/orduster/spring-family-examples/tree/master/springmvc-helloworld "springmvc-helloworld")
 - [springmvc-thymeleaf](https://github.com/orduster/spring-family-examples/tree/master/springmvc-thymeleaf "springmvc-thymeleaf")
+- [springmvc 集成druid、Restful](https://github.com/orduster/spring-family-examples/tree/master/springmvc-jdbctemplate-druid "	springmvc 集成druid、Restful")
 
 
 ### Spring Boot 基础
