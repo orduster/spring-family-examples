@@ -24,4 +24,4 @@
 
 
 ### ssm & Apache-shiro
-- [ssm shiro 用户认证&权限控制](https://github.com/orduster/spring-family-examples/tree/master/ssm-shiro-authorization "ssm shiro 用户认证&权限控制")
+- [ssm shiro 用户认证&权限控制](https://github.com/orduster/spring-family-examples/tree/master/ssm-shiro-authentication&authorization "ssm shiro 用户认证&权限控制")
