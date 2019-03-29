@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.orduster.mapper.RoleMapper">
+    <select id="listRolesByUserName" parameterType="string" resultType="Role">
+        SELECT
+            r.id,
+            r.name
+        FROM user u
+            LEFT JOIN user_role ur
+                ON u.id = ur.uid
+            LEFT JOIN Role r
+                ON r.id = ur.rid
+        WHERE u.name = #{userName}
+    </select>
+</mapper>
