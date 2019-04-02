@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+
+    <!--
+        context：是逆向工程的主要配置信息
+        id：名称
+        targetRuntime：设置生成的文件适用于哪一个 mybatis 版本
+    -->
+    <context id="DB2Tables" targetRuntime="MyBatis3">
+        <!--避免生成重复代码的插件-->
+        <plugin type="com.orduster.util.OverIsMergeablePlugin"/>
+
+        <!--是否在代码中显示注释-->
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <!--是否去除自动生成的注释-->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!--数据库链接地址账号密码-->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost/ssm"
+                        userId="root"
+                        password="123456">
+        </jdbcConnection>
+
+        <!--非必需，类型处理器，在数据库类型和 Java 类型之间转换控制-->
+        <javaTypeResolver>
+            <!--
+                默认情况下，数据库中 decimal，bigInt 对应 Java 中 sql 包下的 BigDecimal
+                使用常用的基本类型代替 sql 包下的引用类型
+            -->
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!--
+            生成 pojo 类存放位置
+            targetPackage：生成的实体类所在的包
+            targetProject：生成的实体类所在的硬盘位置
+        -->
+        <javaModelGenerator targetPackage="com.orduster.domain" targetProject="src/main/java">
+            <!--是否允许子包-->
+            <property name="enableSubPackages" value="true"/>
+            <!--是否清理从数据库中查询出的字符串的左右两边的空白字符-->
+            <property name="trimStrings" value="true"/>
+            <!--是否对 model 添加构造函数-->
+            <property name="constructorBased" value="true"/>
+            <!--建立的 model 对象是否不可改变，即生成的 model 对象不会有 setter 方法，只有构造方法-->
+            <property name="immutable" value="false"/>
+        </javaModelGenerator>
+
+        <!--生成xml映射文件存放位置-->
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources">
+            <!--针对数据库的一个配置，是否把 schema 作为字包名-->
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!--生成mapper类存放位置-->
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.orduster.mapper" targetProject="src/main/java">
+            <!--针对 Oracle 数据库的一个配置，是否把 schema 作为字包名-->
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!--生成对应表及类名-->
+        <table tableName="user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="true" selectByExampleQueryId="false">
+            <property name="my.isgen.usekeys" value="true"/>
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="role" domainObjectName="Role" enableCountByExample="false" enableUpdateByExample="false"
+               enableDeleteByExample="false" enableSelectByExample="true" selectByExampleQueryId="false">
+            <property name="my.isgen.usekeys" value="true"/>
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="permission" domainObjectName="Permission" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="true"
+               selectByExampleQueryId="false">
+            <property name="my.isgen.usekeys" value="true"/>
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="user_role" domainObjectName="UserRole" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="true"
+               selectByExampleQueryId="false">
+            <property name="my.isgen.usekeys" value="true"/>
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+        <table tableName="role_permission" domainObjectName="RolePermission" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="true"
+               selectByExampleQueryId="false">
+            <property name="my.isgen.usekeys" value="true"/>
+            <property name="useActualColumnNames" value="true"/>
+            <generatedKey column="id" sqlStatement="JDBC"/>
+        </table>
+
+    </context>
+
+</generatorConfiguration>
