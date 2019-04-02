@@ -25,4 +25,4 @@
 
 ### ssm & Apache-shiro
 - [ssm shiro 用户认证&权限控制](https://github.com/orduster/spring-family-examples/tree/master/ssm-shiro-authentication&authorization "ssm shiro 用户认证&权限控制")
-- [ssm shiro 权限维护](https://github.com/orduster/spring-family-examples/tree/master/ssm-shiro-authority-maintenance ssm shiro 权限维护)
+- [ssm shiro 权限维护](https://github.com/orduster/spring-family-examples/tree/master/ssm-shiro-authority-maintenance "ssm shiro 权限维护")
