@@ -41,7 +41,7 @@ public class PermissionServiceImpl implements PermissionService {
         }
 
         for (RolePermission rolePermission : rolePermissions) {
-            Permission permission = permissionMapper.selectByPrimaryKey(rolePermission.getId());
+            Permission permission = permissionMapper.selectByPrimaryKey(rolePermission.getPid());
             result.add(permission.getName());
         }
 

@@ -17,7 +17,7 @@ CREATE TABLE `permission` (
   `url` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
-insert  into `permission`(`id`,`name`,`desc_`,`url`) values (1,'addProduct','增加产品','/addProduct'),(2,'deleteProduct','删除产品','/deleteProduct'),(3,'editeProduct','编辑产品','/editeProduct'),(4,'updateProduct','修改产品','/updateProduct'),(5,'listProduct','查看产品','/listProduct'),(6,'addOrder','增加订单','/addOrder'),(7,'deleteOrder','删除订单','/deleteOrder'),(8,'editeOrder','编辑订单','/editeOrder'),(9,'updateOrder','修改订单','/updateOrder'),(11,'listOrder','查看订单','/listOrder');
+insert  into `permission`(`id`,`name`,`desc_`,`url`) values (1,'addProduct','增加产品','/addProduct'),(2,'deleteProduct','删除产品','/deleteProduct'),(3,'editeProduct','编辑产品','/editeProduct'),(4,'updateProduct','修改产品','/updateProduct'),(5,'listProduct','查看产品','/listProduct'),(6,'addOrder','增加订单','/addOrder'),(7,'deleteOrder','删除订单','/deleteOrder'),(8,'editeOrder','编辑订单','/editeOrder'),(9,'updateOrder','修改订单','/updateOrder'),(10,'listOrder','查看订单','/listOrder');
 
 
 
@@ -37,7 +37,7 @@ CREATE TABLE `role_permission` (
   `pid` bigint(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=67 DEFAULT CHARSET=utf8;
-insert  into `role_permission`(`id`,`rid`,`pid`) values (11,2,1),(12,2,2),(13,2,3),(14,2,4),(15,2,5),(50,3,10),(51,3,9),(52,3,8),(53,3,7),(54,3,6),(55,3,1),(56,5,11),(57,1,11),(58,1,9),(59,1,8),(60,1,7),(61,1,6),(62,1,5),(63,1,4),(64,1,3),(65,1,2),(66,1,1);
+insert  into `role_permission`(`id`,`rid`,`pid`) values (11,2,1),(12,2,2),(13,2,3),(14,2,4),(15,2,5),(50,3,10),(51,3,9),(52,3,8),(53,3,7),(54,3,6),(55,3,1),(56,5,10),(57,1,10),(58,1,9),(59,1,8),(60,1,7),(61,1,6),(62,1,5),(63,1,4),(64,1,3),(65,1,2),(66,1,1);
 
 
 
